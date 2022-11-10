@@ -1,4 +1,3 @@
-import 'dart:js';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -69,10 +68,8 @@ class _LoginWidgetState extends State<LoginWidget> {
 
   Future signIn() async {
     showDialog(
-        context: context,
         barrierDismissible: false,
-        builder: ((context) => Center(child: CircularProgressIndicator())));
-
+        builder: ((context) => Center(child: CircularProgressIndicator())), context: context);
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailController.text.trim(),
@@ -80,8 +77,12 @@ class _LoginWidgetState extends State<LoginWidget> {
     } on FirebaseAuthException catch (e) {
       print(e);
     }
-
     // Navigator.of(context) not working!
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }
+
+
+
+
+
