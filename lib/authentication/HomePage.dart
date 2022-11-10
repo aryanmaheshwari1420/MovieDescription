@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Center(child: Column(
         children: [
-          const Center(child: Text("Welcome to the home page"))
+          Center(child: Text("Welcome to the home page"))
         ],
       )),
     );

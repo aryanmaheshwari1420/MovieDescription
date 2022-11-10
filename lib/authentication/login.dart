@@ -40,7 +40,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           ),
           SizedBox(height: 4),
           TextField(
-            controller: emailController,
+            controller: passController,
             cursorColor: Colors.white,
             textInputAction: TextInputAction.next,
             decoration: InputDecoration(labelText: "Password"),

@@ -8,7 +8,7 @@ import 'package:moviedescription/authentication/login.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const Mainpage());
+  runApp(MaterialApp(home: Mainpage()));
 }
 
 class Mainpage extends StatelessWidget {
