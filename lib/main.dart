@@ -8,19 +8,29 @@ import 'package:moviedescription/authentication/login.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MaterialApp(home: Mainpage()));
+  var title;
+  runApp(MaterialApp(
+      navigatorKey: navigatorKey,
+      debugShowCheckedModeBanner: false,
+      title: title,
+      home: Mainpage()));
 }
 
+final navigatorKey = GlobalKey<NavigatorState>();
 class Mainpage extends StatelessWidget {
+  static final String title = 'Firebase Auth';
   const Mainpage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder<User?>(
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (context, snapshot) {
-            if (snapshot.hasData) {
+            if (snapshot.connectionState == ConnectionState.waiting)
+              return Center(child: CircularProgressIndicator());
+            else if (snapshot.hasError)
+              return Center(child: Text("Something went wrong!"));
+            else if (snapshot.hasData) {
               return HomePage();
             } else {
               return LoginWidget();
