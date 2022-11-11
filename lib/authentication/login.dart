@@ -1,14 +1,20 @@
 
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:moviedescription/main.dart';
 
 class LoginWidget extends StatefulWidget {
-  const LoginWidget({super.key});
+  final VoidCallback onClickedSignUp;
 
+  const LoginWidget({
+    Key? key,
+    required this.onClickedSignUp,
+  }) : super(key: key);
   @override
   State<LoginWidget> createState() => _LoginWidgetState();
 }
@@ -60,7 +66,28 @@ class _LoginWidgetState extends State<LoginWidget> {
                 style: TextStyle(
                   fontSize: 24,
                 ),
-              ))
+              )),
+          const SizedBox(
+            height: 24,
+          ),
+          RichText(
+              text:  TextSpan(
+                  text: 'No account ?',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                  children: [
+                TextSpan(
+                  recognizer: TapGestureRecognizer() 
+                  ..onTap = widget.onClickedSignUp,
+                  text: 'Sign Up',
+                  style: const TextStyle(
+                    fontSize: 24,
+                    decoration: TextDecoration.underline,
+                  ),
+                )
+              ]))
         ],
       ),
     );
@@ -69,7 +96,9 @@ class _LoginWidgetState extends State<LoginWidget> {
   Future signIn() async {
     showDialog(
         barrierDismissible: false,
-        builder: ((context) => const Center(child: CircularProgressIndicator())), context: context);
+        builder: ((context) =>
+            const Center(child: CircularProgressIndicator())),
+        context: context);
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailController.text.trim(),
@@ -81,8 +110,3 @@ class _LoginWidgetState extends State<LoginWidget> {
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }
-
-
-
-
-

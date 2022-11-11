@@ -3,13 +3,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:moviedescription/authentication/HomePage.dart';
+import 'package:moviedescription/authentication/auth_page.dart';
 import 'package:moviedescription/authentication/login.dart';
+import 'package:moviedescription/utils/util.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   var title;
   runApp(MaterialApp(
+    scaffoldMessengerKey: Utils.messengerkey,
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       title: title,
@@ -33,7 +36,7 @@ class Mainpage extends StatelessWidget {
             else if (snapshot.hasData) {
               return HomePage();
             } else {
-              return LoginWidget();
+              return AuthPage();
             }
           }),
     );
