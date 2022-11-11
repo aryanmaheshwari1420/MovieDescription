@@ -14,19 +14,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
-      appBar: AppBar(title: Text("Home Page"),),
+      appBar: AppBar(title: const Text("Home Page"),),
       body:  Padding(
         padding: const EdgeInsets.all(32.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Signed In as',style: TextStyle(fontSize: 16),),
-            SizedBox(height: 8,),
+            const Text('Signed In as',style: TextStyle(fontSize: 16),),
+            const SizedBox(height: 8,),
             Text(user.email!,
-            style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 40,),
-            ElevatedButton.icon(onPressed: ()=>FirebaseAuth.instance.signOut(), icon: Icon(Icons.arrow_back), label: Text("sign out",style: TextStyle(fontSize: 24),))
+            const SizedBox(height: 40,),
+            ElevatedButton.icon(onPressed: ()=>FirebaseAuth.instance.signOut(), icon: const Icon(Icons.arrow_back), label: const Text("sign out",style: TextStyle(fontSize: 24),))
           
         ],),
       )

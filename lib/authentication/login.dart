@@ -31,31 +31,31 @@ class _LoginWidgetState extends State<LoginWidget> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           TextField(
             controller: emailController,
             cursorColor: Colors.white,
             textInputAction: TextInputAction.next,
-            decoration: InputDecoration(labelText: "Email"),
+            decoration: const InputDecoration(labelText: "Email"),
           ),
-          SizedBox(height: 4),
+          const SizedBox(height: 4),
           TextField(
             controller: passController,
             cursorColor: Colors.white,
             textInputAction: TextInputAction.next,
-            decoration: InputDecoration(labelText: "Password"),
+            decoration: const InputDecoration(labelText: "Password"),
             obscureText: true,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton.icon(
               onPressed: signIn,
-              icon: Icon(
+              icon: const Icon(
                 Icons.lock_open,
                 size: 32,
               ),
-              label: Text(
+              label: const Text(
                 'Sign In',
                 style: TextStyle(
                   fontSize: 24,
@@ -69,7 +69,7 @@ class _LoginWidgetState extends State<LoginWidget> {
   Future signIn() async {
     showDialog(
         barrierDismissible: false,
-        builder: ((context) => Center(child: CircularProgressIndicator())), context: context);
+        builder: ((context) => const Center(child: CircularProgressIndicator())), context: context);
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailController.text.trim(),
