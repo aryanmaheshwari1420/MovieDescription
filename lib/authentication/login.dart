@@ -6,6 +6,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:moviedescription/authentication/forgot_password.dart';
 import 'package:moviedescription/main.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -78,7 +79,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                   fontSize: 20,
             ),
             ),
-          ),
+            onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: ((context) => ForgotPassword())))),
+          const SizedBox(height: 16,),
           RichText(
               text:  TextSpan(
                   text: 'No account ?',
