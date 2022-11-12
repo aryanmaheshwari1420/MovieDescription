@@ -70,6 +70,15 @@ class _LoginWidgetState extends State<LoginWidget> {
           const SizedBox(
             height: 24,
           ),
+          GestureDetector(
+            child: const Text('Forgot Password?',
+            style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  color: Colors.amber,
+                  fontSize: 20,
+            ),
+            ),
+          ),
           RichText(
               text:  TextSpan(
                   text: 'No account ?',
