@@ -37,7 +37,7 @@ class Mainpage extends StatelessWidget {
               return HomePage();
             } else {
               return AuthPage();
-            }
+            }z
           }),
     );
   }
