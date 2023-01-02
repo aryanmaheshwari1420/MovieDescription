@@ -63,7 +63,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size.fromHeight(50)),
-                  onPressed: () {},
+                  onPressed: resetPassword,
                   icon: Icon(Icons.email_outlined),
                   label: const Text(
                     'Reset Password',
@@ -85,7 +85,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     try {
       await FirebaseAuth.instance
           .sendPasswordResetEmail(email: emailController.text.trim());
-      Utils.showSnackBar('Password rest email sent');
+      Utils.showSnackBar('Password reset email sent');
       Navigator.of(context).popUntil((route) => route.isFirst);
     } on FirebaseAuthException catch (e) {
       print(e);

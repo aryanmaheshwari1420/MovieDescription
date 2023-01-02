@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -133,18 +135,29 @@ class _LoginWidgetState extends State<LoginWidget> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      TextButton(
-                          onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return SignUp();
-                            }));
-                          },
-                          child: Text(
-                            "Forgot password?",
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                          )),
+                      // TextButton(
+                      //     onPressed: () {
+                      //       // Navigator.push(context,
+                      //       //     MaterialPageRoute(builder: (context) {
+                      //       //   return SignUp();
+                      //       // }));
+                      //       Navigator.of(context).push(MaterialPageRoute(
+                      //           builder: ((context) => ForgotPassword())));
+                      //     },
+                      //     child: Text(
+                      //       "Forgot password?",
+                      //       style:
+                      //           TextStyle(fontSize: 15, color: Colors.black54),
+                      //     )),
+                      GestureDetector(
+            child: const Text('Forgot Password?',
+            style: TextStyle(
+                  // decoration: TextDecoration.underline,
+                  color: Colors.black54,
+                  fontSize: 15,
+            ),
+            ),
+            onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: ((context) => ForgotPassword())))),
                     ],
                   ),
                   SizedBox(height: 5),
@@ -153,7 +166,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 89, 96, 96),
+                          backgroundColor: Color.fromARGB(255, 89, 96, 96),
                           shadowColor: Color.fromARGB(255, 187, 186, 179),
                           padding: EdgeInsets.symmetric(
                               horizontal: 30.0, vertical: 8.0),

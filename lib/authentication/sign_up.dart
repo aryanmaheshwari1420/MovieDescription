@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:moviedescription/authentication/login.dart';
 import 'package:moviedescription/frontend/Login.dart';
 import 'package:moviedescription/main.dart';
 import 'package:email_validator/email_validator.dart';
@@ -229,7 +230,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             signUp();
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => Login()),
+                              MaterialPageRoute(builder: (context) => LoginWidget(onClickedSignUp: () {  },)),
                             );
                           }),
                           // onPressed: () {
@@ -248,7 +249,6 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           //     } else {
                           //       printData();
                           //   Navigator.pushNamed(context, "S2");
-
                           //     }
                           //   });
                           //   _emailcontroller.clear();
