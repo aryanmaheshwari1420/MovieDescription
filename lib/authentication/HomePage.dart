@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
-      appBar: AppBar(title: const Text("Home Page"),),
+      appBar: AppBar(title: const Text("logout Page"),),
       body:  Padding(
         padding: const EdgeInsets.all(32.0),
         child: Column(
