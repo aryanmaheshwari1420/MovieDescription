@@ -147,8 +147,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         // errorText: _emailError,
                         contentPadding:
                             EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                        border:
-                            OutlineInputBorder(borderRadius: BorderRadius.zero),
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(25))),
                         filled: true,
                         fillColor: Color.fromARGB(255, 220, 214, 214),
                         hintText: 'Email',
@@ -162,9 +163,12 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                   const SizedBox(height: 30),
                   TextFormField(
                       controller: passController,
-                      cursorColor: Colors.white,
+                      // cursorColor: Colors.white,
                       textInputAction: TextInputAction.next,
                       decoration: const InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(25))),
                           contentPadding:
                               EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                           // border: BorderRadius.circular(10),
@@ -230,7 +234,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             signUp();
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => LoginWidget(onClickedSignUp: () {  },)),
+                              MaterialPageRoute(
+                                  builder: (context) => LoginWidget(
+                                        onClickedSignUp: () {},
+                                      )),
                             );
                           }),
                           // onPressed: () {
@@ -338,6 +345,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               text: 'Sign Up',
                               style: const TextStyle(
                                 fontSize: 20,
+                                decoration: TextDecoration.underline
                               ),
                             )
                           ]))
@@ -454,6 +462,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: emailController.text.trim(),
           password: passController.text.trim());
+
+      Utils.showSnackBar("Account has been created");
     } on FirebaseAuthException catch (e) {
       print(e);
 

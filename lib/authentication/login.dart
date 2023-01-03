@@ -247,7 +247,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = widget.onClickedSignUp,
                                 text: 'Create an account',
-                                style: TextStyle(fontSize: 16))
+                                style: TextStyle(fontSize: 16,decoration: TextDecoration.underline),
+
+                                ),
+                                
                           ]))
                       // Text(
                       //   "Not registered yet?",
