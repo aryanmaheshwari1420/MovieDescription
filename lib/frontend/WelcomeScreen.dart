@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:moviedescription/authentication/login.dart';
+import 'package:moviedescription/authentication/sign_up.dart';
 import 'package:moviedescription/frontend/Login.dart';
 import 'package:moviedescription/frontend/SignUp.dart';
 
@@ -62,7 +64,7 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return Login();
+                            return LoginWidget(onClickedSignUp: () { },);
                           }));
                         },
                         child: Text(
@@ -85,7 +87,7 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return SignUp();
+                            return SignUpWidget(onClickedSignIn: () { },);
                           }));
                         },
                         child: Text(
