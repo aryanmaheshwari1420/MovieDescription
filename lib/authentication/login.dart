@@ -51,33 +51,33 @@ class _LoginWidgetState extends State<LoginWidget> {
         backgroundColor: Color.fromARGB(255, 179, 160, 122),
       ),
       backgroundColor: Colors.transparent,
-      body: SingleChildScrollView(
-        child: Stack(children: [
-          Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bG9naW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"),
-                      fit: BoxFit.cover))),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              // color: Colors.red,
-              height: 800,
-              width: 450,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 55, left: 18),
-                child: Text("Login",
-                    style: TextStyle(fontSize: 50, color: Colors.white)),
-              ),
+      body: Stack(children: [
+        Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bG9naW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"),
+                    fit: BoxFit.fitHeight))),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            // color: Colors.red,
+            height: 800,
+            width: 450,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 55, left: 18),
+              child: Text("Login",
+                  style: TextStyle(fontSize: 50, color: Colors.white)),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 80, left: 12),
-            child: Container(
-              // color: Colors.green,
-              height: 570,
-              width: 370,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 80, left: 12),
+          child: Container(
+            // color: Colors.green,
+            height: 570,
+            width: 370,
+            child: SingleChildScrollView(
               child: Column(
                 children: [
                   Padding(
@@ -149,15 +149,21 @@ class _LoginWidgetState extends State<LoginWidget> {
                       //       style:
                       //           TextStyle(fontSize: 15, color: Colors.black54),
                       //     )),
-                      GestureDetector(
-            child: const Text('Forgot Password?',
-            style: TextStyle(
-                  // decoration: TextDecoration.underline,
-                  color: Colors.black54,
-                  fontSize: 15,
-            ),
-            ),
-            onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: ((context) => ForgotPassword())))),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: GestureDetector(
+                            child: const Text(
+                              'Forgot Password?',
+                              style: TextStyle(
+                                // decoration: TextDecoration.underline,
+                                color: Colors.black54,
+                                fontSize: 15,
+                              ),
+                            ),
+                            onTap: () => Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: ((context) => ForgotPassword())))),
+                      ),
                     ],
                   ),
                   SizedBox(height: 5),
@@ -320,9 +326,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                 ],
               ),
             ),
-          )
-        ]),
-      ),
+          ),
+        )
+      ]),
     );
 
     // ------------------------------------------------------------
