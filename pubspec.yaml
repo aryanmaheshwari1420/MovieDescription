@@ -54,7 +54,9 @@ flutter_icons:
   image_path: "assets/logo.png"
 
 flutter_native_splash:
-  image_path: "assets/logo.png"  
+  color: "#fef9ec"
+  image_path: "assets/splash.png"
+  background_image: "assets/splash.png"  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
