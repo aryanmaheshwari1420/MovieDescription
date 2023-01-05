@@ -14,7 +14,7 @@ Future main() async {
   await Firebase.initializeApp();
   // var title;
   runApp(MaterialApp(
-    scaffoldMessengerKey: Utils.messengerkey,
+      scaffoldMessengerKey: Utils.messengerkey,
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       // title: title,
@@ -22,6 +22,7 @@ Future main() async {
 }
 
 final navigatorKey = GlobalKey<NavigatorState>();
+
 class Mainpage extends StatelessWidget {
   static final String title = 'Firebase Auth';
   const Mainpage({super.key});
@@ -38,7 +39,7 @@ class Mainpage extends StatelessWidget {
             else if (snapshot.hasData) {
               return Home();
             } else {
-              return AuthPage();
+              return WelcomeScreen();
             }
           }),
     );

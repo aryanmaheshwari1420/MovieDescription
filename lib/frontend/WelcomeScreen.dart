@@ -3,15 +3,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:moviedescription/authentication/auth_page.dart';
 import 'package:moviedescription/authentication/login.dart';
 import 'package:moviedescription/authentication/sign_up.dart';
 import 'package:moviedescription/frontend/Login.dart';
 import 'package:moviedescription/frontend/SignUp.dart';
 
-
 class WelcomeScreen extends StatelessWidget {
   // String title = '';
-  WelcomeScreen({Key? key,}) : super(key: key);
+  WelcomeScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return LoginWidget(onClickedSignUp: () { },);
+                            return AuthPage();
                           }));
                         },
                         child: Text(
@@ -87,7 +89,7 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return SignUpWidget(onClickedSignIn: () { },);
+                            return AuthPage();
                           }));
                         },
                         child: Text(
