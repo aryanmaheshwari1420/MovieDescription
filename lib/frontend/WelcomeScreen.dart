@@ -8,6 +8,7 @@ import 'package:moviedescription/authentication/login.dart';
 import 'package:moviedescription/authentication/sign_up.dart';
 import 'package:moviedescription/frontend/Login.dart';
 import 'package:moviedescription/frontend/SignUp.dart';
+import 'package:moviedescription/main.dart';
 
 class WelcomeScreen extends StatelessWidget {
   // String title = '';
@@ -66,7 +67,7 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return AuthPage();
+                            return Mainpage();
                           }));
                         },
                         child: Text(
@@ -89,7 +90,7 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return AuthPage();
+                            return Mainpage();
                           }));
                         },
                         child: Text(

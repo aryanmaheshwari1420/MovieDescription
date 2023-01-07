@@ -39,7 +39,7 @@ class Mainpage extends StatelessWidget {
             else if (snapshot.hasData) {
               return Home();
             } else {
-              return WelcomeScreen();
+              return AuthPage();
             }
           }),
     );

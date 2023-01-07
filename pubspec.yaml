@@ -42,11 +42,13 @@ dependencies:
   tmdb_api: ^2.1.3
   google_fonts: ^3.0.1
   flutter_launcher_icons: ^0.11.0
-  flutter_native_splash: ^2.2.16
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  flutter_native_splash: ^2.2.16
+
 
 flutter_icons:
   android: true
@@ -55,8 +57,9 @@ flutter_icons:
 
 flutter_native_splash:
   color: "#fef9ec"
-  image_path: "assets/splash.png"
-  background_image: "assets/splash.png"  
+  image: "assets/splash.png"
+  android: true
+  ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
