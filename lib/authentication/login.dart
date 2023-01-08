@@ -135,20 +135,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      // TextButton(
-                      //     onPressed: () {
-                      //       // Navigator.push(context,
-                      //       //     MaterialPageRoute(builder: (context) {
-                      //       //   return SignUp();
-                      //       // }));
-                      //       Navigator.of(context).push(MaterialPageRoute(
-                      //           builder: ((context) => ForgotPassword())));
-                      //     },
-                      //     child: Text(
-                      //       "Forgot password?",
-                      //       style:
-                      //           TextStyle(fontSize: 15, color: Colors.black54),
-                      //     )),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: GestureDetector(
@@ -179,21 +165,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                           shape: StadiumBorder(),
                         ),
                         onPressed: signIn,
-                        // onPressed: () {
-                        //   setState(() {
-                        //     if (_emailcontroller.text.length <= 5) {
-                        //       if (_passcontroller.text.length <= 5) {
-                        //         _errorpass = "Enter a valid pass";
-                        //       }
-                        //       _erroremail = "Enter a valid email";
-                        //     }  else {
-                        //       printData();
-                        //   Navigator.popAndPushNamed(context, "S4");
-                        //     }
-                        //   });
-                        //   _emailcontroller.clear();
-                        //   _passcontroller.clear();
-                        // },
                         child: Text(
                           "Sign in",
                           style: TextStyle(
@@ -252,22 +223,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 ),
                                 
                           ]))
-                      // Text(
-                      //   "Not registered yet?",
-                      //   style: TextStyle(
-                      //       fontSize: 15, color: Color.fromARGB(255, 54, 60, 61)),
-                      // )
-                      // TextButton(
-                      //     onPressed: () {
-                      //       Navigator.push(context,
-                      //           MaterialPageRoute(builder: (context) {
-                      //         return SignUp();
-                      //       }));
-                      //     },
-                      //     child: Text(
-                      //       "Create an account",
-                      //       style: TextStyle(fontSize: 20),
-                      //     ))
                     ],
                   ),
                   SizedBox(
@@ -322,8 +277,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                           width: 45,
                         ),
                       ),
-                      // Image(image: AssetImage("images/insta.png"), height: 10,width: 10,),
-                      // Image(image: AssetImage("images/twitter.png"), height: 10,width: 10,),
                     ],
                   )
                 ],
@@ -334,76 +287,6 @@ class _LoginWidgetState extends State<LoginWidget> {
       ]),
     );
 
-    // ------------------------------------------------------------
-    // Padding(
-    //   padding: const EdgeInsets.all(16.0),
-    //   child: Column(
-    //     mainAxisAlignment: MainAxisAlignment.center,
-    //     children: [
-    //       const SizedBox(
-    //         height: 40,
-    //       ),
-    //       TextField(
-    //         controller: emailController,
-    //         cursorColor: Colors.white,
-    //         textInputAction: TextInputAction.next,
-    //         decoration: const InputDecoration(labelText: "Email"),
-    //       ),
-    //       const SizedBox(height: 4),
-    //       TextField(
-    //         controller: passController,
-    //         cursorColor: Colors.white,
-    //         textInputAction: TextInputAction.next,
-    //         decoration: const InputDecoration(labelText: "Password"),
-    //         obscureText: true,
-    //       ),
-    //       const SizedBox(height: 20),
-    //       ElevatedButton.icon(
-    //           onPressed: signIn,
-    //           icon: const Icon(
-    //             Icons.lock_open,
-    //             size: 32,
-    //           ),
-    //           label: const Text(
-    //             'Sign In',
-    //             style: TextStyle(
-    //               fontSize: 24,
-    //             ),
-    //           )),
-    //       const SizedBox(
-    //         height: 24,
-    //       ),
-    //       GestureDetector(
-    //         child: const Text('Forgot Password?',
-    //         style: TextStyle(
-    //               decoration: TextDecoration.underline,
-    //               color: Colors.amber,
-    //               fontSize: 20,
-    //         ),
-    //         ),
-    //         onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: ((context) => ForgotPassword())))),
-    //       const SizedBox(height: 16,),
-    //       RichText(
-    //           text:  TextSpan(
-    //               text: 'No account ?',
-    //               style: const TextStyle(
-    //                 color: Colors.white,
-    //                 fontSize: 24,
-    //               ),
-    //               children: [
-    //             TextSpan(
-    //               recognizer: TapGestureRecognizer()
-    //               ..onTap = widget.onClickedSignUp,
-    //               text: 'Sign Up',
-    //               style: const TextStyle(
-    //                 fontSize: 24,
-    //                 decoration: TextDecoration.underline,
-    //               ),
-    //             )
-    //           ]))
-    //     ],
-    //   ),
-    // );
   }
 
   Future signIn() async {

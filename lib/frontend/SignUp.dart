@@ -208,16 +208,7 @@ class _screen_3State extends State<SignUp> {
                         ),
                       ),
                     ),
-                    // const SizedBox(
-                    //   width: 90,
-                    // ),
-                    // CircleAvatar(
-                    //     radius: 30,
-                    //     backgroundColor: Colors.blueAccent,
-                    //     child: IconButton(
-                    //         color: Colors.white,
-                    //         onPressed: () {},
-                    //         icon: Icon(Icons.arrow_forward))),
+          
                   ],
                 ),
 
@@ -269,20 +260,6 @@ class _screen_3State extends State<SignUp> {
                 SizedBox(
                   height: 20,
                 ),
-                
-                // Container(
-                //   child: ElevatedButton(
-                //     child: Text("go to screen 4"),
-                //     onPressed: () {
-                //       Navigator.push(context,
-                //           MaterialPageRoute(builder: (context) {
-                //         return Screen4(
-                //           title: 'pizza screen',
-                //         );
-                //       }));
-                //     },
-                //   ),
-                // )
               ],
             ),
           ),
