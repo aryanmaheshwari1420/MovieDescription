@@ -1,16 +1,17 @@
-# moviedescription
+Meet Me
+Meet Me is a real-time movie description app that uses the TMDB API with full authorization, including password recovery. Users can install the app by downloading the APK file uploaded on the GitHub repository.
 
-A new Flutter project.
+Description
+Meet Me is a mobile app that allows users to access real-time descriptions of movies, TV shows, and episodes using the TMDB API. Users can create an account, log in, and view the latest information about their favorite movies, TV shows, and episodes, including ratings and small descriptions.
 
-## Getting Started
+Installation
+To install Meet Me, download the APK file from the GitHub repository. After downloading, you can install the app on your mobile device. Before using the app, you need to create an account, log in, and then you will be redirected to the main page where you can see the latest real-time descriptions of movies, shows, episodes, etc.
 
-This project is a starting point for a Flutter application.
+Contributing
+Meet Me is currently a solo project, with only one contributor. If you find any bugs or have any suggestions, please report them to the GitHub repository.
 
-A few resources to get you started if this is your first Flutter project:
+License
+Meet Me does not have a license yet.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Contact
+You can contact the creator of Meet Me through the GitHub repository.
