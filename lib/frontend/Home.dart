@@ -41,9 +41,6 @@ class _HomeState extends State<Home> {
       topratedmovies = topratedresult['results'];
       tv = tvresult['results'];
     });
-    // print(trendingmovies);
-    // print(topratedresult);
-    // print(tv);
   }
 
   @override
@@ -51,70 +48,6 @@ class _HomeState extends State<Home> {
     return Scaffold(
       drawer: Drawer(
         child: HomePage(),
-        // child: ListView(
-        //   padding: EdgeInsets.zero,
-        //   children: [
-        //     SizedBox(
-        //       height: 80,
-        //       child: Center(
-        //           child: Text(
-        //         "Choose",
-        //         style: TextStyle(fontSize: 24),
-        //       )),
-        //     ),
-        //     ListTile(
-        //       leading: Icon(Icons.play_arrow_sharp),
-        //       title: Text("TV Seasons"),
-        //       subtitle: Text("Developer"),
-        //       trailing: Icon(Icons.arrow_forward_ios),
-        //       onTap: () {
-        //         Navigator.push(context, MaterialPageRoute(
-        //           builder: (context) {
-        //             // return TVSeason();
-        //           },
-        //         ));
-        //       },
-        //     ),
-        //     SizedBox(
-        //       height: 15,
-        //     ),
-        //     ListTile(
-        //       leading: Icon(Icons.play_arrow_sharp),
-        //       title: Text("TV Episodes"),
-        //       subtitle: Text("Tester"),
-        //       trailing: Icon(Icons.arrow_forward_ios),
-        //       onTap: () {},
-        //     ),
-        //     SizedBox(
-        //       height: 15,
-        //     ),
-        //     ListTile(
-        //       leading: Icon(Icons.play_arrow_sharp),
-        //       title: Text("Guest Seasons"),
-        //       subtitle: Text("Front-End"),
-        //       trailing: Icon(Icons.arrow_forward_ios),
-        //       onTap: () {},
-        //     ),
-        //     SizedBox(
-        //       height: 15,
-        //     ),
-        //     ListTile(
-        //       leading: Icon(Icons.play_arrow_sharp),
-        //       title: Text("Discover"),
-        //       subtitle: Text("Back-End"),
-        //       trailing: Icon(Icons.arrow_forward_ios),
-        //     ),
-        //     SizedBox(
-        //       height: 15,
-        //     ),
-        //     ListTile(
-        //       leading: Icon(Icons.play_arrow_sharp),
-        //       title: Text("Collections"),
-        //       subtitle: Text("Back-End"),
-        //       trailing: Icon(Icons.arrow_forward_ios),
-        //     )
-        //   ],
-        // ),
       ),
       backgroundColor: Color.fromARGB(255, 39, 38, 36),
       appBar: AppBar(

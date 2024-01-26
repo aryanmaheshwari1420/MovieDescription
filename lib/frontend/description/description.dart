@@ -39,6 +39,7 @@ class TrendingDescription extends StatelessWidget {
           ),
           SizedBox(height: 15,),
           Container(padding: EdgeInsets.all(10),
+          // ignore: unnecessary_null_comparison
           child: modified_text(text: name!=null?name:'Not available',size: 24,color: Colors.white,
           ),
           ),
